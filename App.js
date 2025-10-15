@@ -8,7 +8,15 @@ export default function App() {
     <SafeAreaProvider>
       <SafeAreaView>
         <Text style={styles.helloText}>Hello</Text>
-        <Human />
+        <Human
+          firstName={'John'}
+          lastName={'Doe'}
+          age={30}
+          isMarried={false}
+          car={{ brand: 'Toyota', model: 'Corolla', year: 2020 }}
+        >
+          <Text style={{ color: 'red', fontSize: 18 }}>Je suis un enfant</Text>
+        </Human>
       </SafeAreaView>
     </SafeAreaProvider>
   );
