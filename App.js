@@ -17,6 +17,14 @@ export default function App() {
         >
           <Text style={{ color: 'red', fontSize: 18 }}>Je suis un enfant</Text>
         </Human>
+        <Text style={styles.helloText}>Bonjour</Text>
+        <Human
+          firstName={'Jane'}
+          lastName={'Smith'}
+          age={85}
+          isMarried={true}
+          car={{ brand: 'Honda', model: 'Civic', year: 2018 }}
+        />
       </SafeAreaView>
     </SafeAreaProvider>
   );
