@@ -1,15 +1,14 @@
-import { Alert } from 'react-native';
+import { Platform, Text } from 'react-native';
 import { SafeAreaProvider, SafeAreaView } from 'react-native-safe-area-context';
-import { Child } from './components/Child/Child';
 export default function App() {
-  function hello(name) {
-    Alert.alert('Hello' + name);
-  }
-
   return (
     <SafeAreaProvider>
       <SafeAreaView style={{ flex: 1 }}>
-        <Child onPress={hello} />
+        {Platform.OS === 'ios' ? (
+          <Text>Hello sur IOS</Text>
+        ) : (
+          <Text>Hello sur Android</Text>
+        )}
       </SafeAreaView>
     </SafeAreaProvider>
   );
